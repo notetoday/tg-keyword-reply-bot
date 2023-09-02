@@ -24,5 +24,3 @@ jobs:
           registry: docker.pkg.github.com
           repository: notetoday/tg-keyword-reply-bot/tg-keyword-reply-bot
           tag_with_ref: true
-        
-        
