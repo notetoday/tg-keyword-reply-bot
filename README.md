@@ -21,12 +21,12 @@
 ### 如何搭建
 自己编译
 clone本仓库并按照需求进行修改
-使用 go build -ldflags "-w -s" -trimpath -o tgbot . 进行编译
-使用 ./tgbot -t TOKEN 运行机器人
+使用 `go build -ldflags "-w -s" -trimpath -o tgbot .` 进行编译
+使用 `./tgbot -t TOKEN` 运行机器人
 使用Github Action编译的版本
 访问 https://github.com/zu1k/tg-keyword-reply-bot/actions
 下载Github Action编译的可执行文件，解压bin.zip
-使用 ./tg-keyword-reply-bot -t TOKEN 运行机器人
+使用 `./tg-keyword-reply-bot -t TOKEN` 运行机器人
 ## License
 
 MIT zu1k i@zu1k.com
