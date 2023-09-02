@@ -22,7 +22,7 @@ jobs:
           username: zu1k
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: zu1k/tg-keyword-reply-bot/tg-keyword-reply-bot
+          repository: notetoday/tg-keyword-reply-bot/tg-keyword-reply-bot
           tag_with_ref: true
         
         
