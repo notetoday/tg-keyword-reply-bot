@@ -6,12 +6,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-
-- name: Use Node.js 16
-  uses: actions/setup-node@v2
-  with:
-    node-version: 16
-
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
 
     - name: Set up Go 1.21
       uses: actions/setup-go@v1
