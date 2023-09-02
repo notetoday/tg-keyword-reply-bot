@@ -1,17 +1,15 @@
 name: Go
 on: [push]
-jobs:
 
+jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-
     - name: Set up Go 1.21
       uses: actions/setup-go@v1
       with:
         go-version: 1.21
-      id: go
 
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
@@ -24,12 +22,14 @@ jobs:
             dep ensure
         fi
 
-    - run: mkdir -p build
+    - name: Create build directory
+      run: mkdir -p build
 
     - name: Build
-      run: go build -v -ldflags "-w -s" -trimpath -o build/tg-keyword-reply-bot .
-    
-    - uses: actions/upload-artifact@v1
+      run: go build -v -ldflags "-w -s" -trimpath -o build/tg-keyword-reply-bot
+
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v1
       with:
         name: bin
         path: build
